@@ -1,0 +1,8 @@
+services:
+  web:
+    image: nginx:latest
+    restart: unless-stopped
+
+  database:
+    image: redis:latest
+    restart: unless-stopped

@@ -1,0 +1,15 @@
+services:
+  ftp:
+    image: fauria/vsftpd
+    restart: unless-stopped
+    environment:
+      FTP_USER: ftpuser
+      FTP_PASS: ftppass
+      PASV_ADDRESS: 192.168.100.3
+      PASV_MIN_PORT: "21100"
+      PASV_MAX_PORT: "21110"
+    ports:
+      - "21:21/tcp"
+      - "21100-21110:21100-21110/tcp"
+    volumes:
+      - /home/vagrant/ftp:/home/vsftpd/ftpuser
