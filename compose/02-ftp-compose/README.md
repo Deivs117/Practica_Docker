@@ -13,7 +13,7 @@ Levanta un servidor FTP usando la imagen `fauria/vsftpd`.
 El directorio `/home/vagrant/ftp` del host se monta en el contenedor como
 el directorio de datos del usuario FTP.
 
-## Prerrequisitos (servidorUbuntu)
+## Prerrequisitos (servidorUbuntuDC)
 
 El script `provision-server.sh` ya crea y configura `/home/vagrant/ftp`
 automáticamente. Si necesitas hacerlo a mano:
@@ -27,7 +27,7 @@ sudo service vsftpd stop || true
 ## Uso
 
 ```bash
-# Desde servidorUbuntu
+# Desde servidorUbuntuDC
 cd ~/repo/compose/02-ftp-compose
 
 # Validar configuración

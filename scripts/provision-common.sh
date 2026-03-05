@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # provision-common.sh
 # Instala Docker CE y el plugin Docker Compose v2 en Ubuntu 22.04.
-# Se ejecuta en AMBAS VMs (clienteUbuntu y servidorUbuntu).
+# Se ejecuta en AMBAS VMs (clienteUbuntuDC y servidorUbuntuDC).
 
 set -euo pipefail
 
