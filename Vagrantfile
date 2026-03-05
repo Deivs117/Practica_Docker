@@ -5,12 +5,12 @@ Vagrant.configure("2") do |config|
   config.vm.box = "bento/ubuntu-22.04"
 
   # Cliente Ubuntu
-  config.vm.define "clienteUbuntu" do |cliente|
-    cliente.vm.hostname = "clienteUbuntu"
+  config.vm.define "clienteUbuntuDC" do |cliente|
+    cliente.vm.hostname = "clienteUbuntuDC"
     cliente.vm.network "private_network", ip: "192.168.100.2"
 
     cliente.vm.provider "virtualbox" do |vb|
-      vb.name   = "clienteUbuntu"
+      vb.name   = "clienteUbuntuDC"
       vb.memory = "1024"
       vb.cpus   = 1
     end
@@ -21,12 +21,12 @@ Vagrant.configure("2") do |config|
   end
 
   # Servidor Ubuntu
-  config.vm.define "servidorUbuntu" do |servidor|
-    servidor.vm.hostname = "servidorUbuntu"
+  config.vm.define "servidorUbuntuDC" do |servidor|
+    servidor.vm.hostname = "servidorUbuntuDC"
     servidor.vm.network "private_network", ip: "192.168.100.3"
 
     servidor.vm.provider "virtualbox" do |vb|
-      vb.name   = "servidorUbuntu"
+      vb.name   = "servidorUbuntuDC"
       vb.memory = "1024"
       vb.cpus   = 1
     end

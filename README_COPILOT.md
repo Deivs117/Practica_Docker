@@ -49,8 +49,8 @@ Opcional:
 
 ## 1) Levantar máquinas (Vagrant)
 Este repo crea 2 VMs:
-- `clienteUbuntu` → IP `192.168.100.2`
-- `servidorUbuntu` → IP `192.168.100.3`
+- `clienteUbuntuDC` → IP `192.168.100.2`
+- `servidorUbuntuDC` → IP `192.168.100.3`
 
 ### Comandos (host)
 ```bash
@@ -61,9 +61,9 @@ vagrant status
 ### Conectarte por SSH
 
 ```bash
-vagrant ssh clienteUbuntu
+vagrant ssh clienteUbuntuDC
 # o
-vagrant ssh servidorUbuntu
+vagrant ssh servidorUbuntuDC
 ```
 
 ### Verificar red (dentro de cada VM)
@@ -99,7 +99,7 @@ sudo docker compose version
 
 ### 3.1 Crear carpeta de trabajo (dentro de la VM)
 
-Recomendado hacerlo en `clienteUbuntu`:
+Recomendado hacerlo en `clienteUbuntuDC`:
 
 ```bash
 cd ~
@@ -211,12 +211,12 @@ sudo docker compose -f docker-compose.ports.yml down
 > Se debe configurar un servidor FTP usando Docker Compose.
 > Se sugiere usar imagen `fauria/vsftpd` (o `panubo/vsftpd`).
 
-### 6.1 Preparar directorio de volumen (en servidorUbuntu)
+### 6.1 Preparar directorio de volumen (en servidorUbuntuDC)
 
-Entrar a `servidorUbuntu`:
+Entrar a `servidorUbuntuDC`:
 
 ```bash
-vagrant ssh servidorUbuntu
+vagrant ssh servidorUbuntuDC
 ```
 
 Crear directorio que se montará al contenedor:

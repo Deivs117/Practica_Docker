@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # provision-server.sh
-# Aprovisionamiento específico para servidorUbuntu.
+# Aprovisionamiento específico para servidorUbuntuDC.
 # Se ejecuta DESPUÉS de provision-common.sh.
 
 set -euo pipefail
