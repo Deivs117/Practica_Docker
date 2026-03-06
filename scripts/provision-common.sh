@@ -13,7 +13,8 @@ apt-get install -y \
   ca-certificates \
   curl \
   gnupg \
-  lsb-release
+  lsb-release \
+  lftp
 
 echo "==> Añadiendo clave GPG y repositorio de Docker..."
 install -m 0755 -d /etc/apt/keyrings
